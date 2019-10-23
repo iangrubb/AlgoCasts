@@ -17,6 +17,24 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+
+function printable(poundSigns, total) {
+    let str = ''
+    for (let idx = 0 ; idx < total ; idx++) {
+        str += (idx < poundSigns ? "#" : " ")
+    }
+    return str
+}
+
+function steps(n) {
+
+    for (let idx = 1 ; idx <= n ; idx++) {
+        console.log(printable(idx, n))
+    }
+
+
+
+
+}
 
 module.exports = steps;
