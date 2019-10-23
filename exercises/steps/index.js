@@ -32,9 +32,6 @@ function steps(n) {
         console.log(printable(idx, n))
     }
 
-
-
-
 }
 
 module.exports = steps;

@@ -14,6 +14,23 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function printable(poundSigns, total) {
+    let str = ''
+    for (let idx = 0 ; idx < total ; idx++) {
+        str += (idx < poundSigns ? "#" : " ")
+    }
+    return str
+}
+
+function pyramid(n) {
+
+    for (let row = 0 ; row < n ; row++) {
+
+        let part = printable(row, n - 1)
+
+        console.log(part.split("").reverse().join("") + "#" + part)
+    }
+
+}
 
 module.exports = pyramid;
